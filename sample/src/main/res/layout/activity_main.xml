@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center_horizontal"
+                android:text="Make Dialog with Properties"
+                android:textColor="@color/title_item"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!--Button Count Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_button_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bottom Button Count"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_button_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_button_count_0"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textColor="@color/title_item" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button_count_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/title_item" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button_count_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2"
+                            android:textColor="@color/title_item" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button_count_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textColor="@color/title_item" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Positive Button Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                android:visibility="gone"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Positive Button Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Positive"
+                        android:textColor="@color/title_item" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_positive_isnull"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:text="Is Null?"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="Color"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:id="@+id/color_positive"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_positive_onclick"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Has OnClick?"
+                            android:textColor="@color/title_item" />
+
+                        <CheckBox
+                            android:id="@+id/cb_positive_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:checked="true"
+                            android:text="Is Dismiss OnClick?"
+                            android:textColor="@color/title_item" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Negative Button Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_negative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                android:visibility="gone"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Negative Button Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_negative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Negative"
+                        android:textColor="@color/title_item" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_negative_isnull"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:text="Is Null?"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="Color"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:id="@+id/color_negative"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_negative_onclick"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Has OnClick?"
+                            android:textColor="@color/title_item" />
+
+                        <CheckBox
+                            android:id="@+id/cb_negative_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:checked="true"
+                            android:text="Is Dismiss OnClick?"
+                            android:textColor="@color/title_item" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Neutral Button Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_neutral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                android:visibility="gone"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Neutral Button Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_neutral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Neutral"
+                        android:textColor="@color/title_item" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_neutral_isnull"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:text="Is Null?"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="Color"
+                            android:textColor="@color/title_item" />
+
+                        <View
+                            android:id="@+id/color_neutral"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorAccent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_neutral_onclick"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Has OnClick?"
+                            android:textColor="@color/title_item" />
+
+                        <CheckBox
+                            android:id="@+id/cb_neutral_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/property_left_margin"
+                            android:checked="true"
+                            android:text="Is Dismiss OnClick?"
+                            android:textColor="@color/title_item" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Title Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Title Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="Icon"
+                            android:textColor="@color/title_item" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_icon_0"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="empty"
+                                android:textColor="@color/title_item" />
+
+                            <RadioButton
+                                android:id="@+id/radio_icon_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Help"
+                                android:textColor="@color/title_item" />
+
+                            <RadioButton
+                                android:id="@+id/radio_icon_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Info"
+                                android:textColor="@color/title_item" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="This is Title"
+                        android:textColor="@color/title_item" />
+
+                    <CheckBox
+                        android:id="@+id/cb_title_isnull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Is Null?"
+                        android:textColor="@color/title_item" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Message Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Message Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="This is message.\nNative Dialog.\nAll Right Reserved."
+                        android:textColor="@color/title_item" />
+
+                    <CheckBox
+                        android:id="@+id/cb_message_isnull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Is Null?"
+                        android:textColor="@color/title_item" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Cancelable Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_cancelable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel Property"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cancelable_outside"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:checked="true"
+                        android:text="Is Cancelable When Touch Outside"
+                        android:textColor="@color/title_item" />
+
+
+                    <CheckBox
+                        android:id="@+id/cb_cancel_listener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:checked="true"
+                        android:text="OnCancel Event"
+                        android:textColor="@color/title_item" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--Custom View Property-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/layout_customview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="@dimen/margin_between_item"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="8dp"
+                card_view:contentPadding="@dimen/padding_cardview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Custom View"
+                        android:textColor="@color/title_item"
+                        android:textSize="@dimen/text_size_item"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/cb_customview_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Add Custom View"
+                        android:textColor="@color/title_item" />
+
+                    <CheckBox
+                        android:id="@+id/cb_customview_onclick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Add OnClick Event on Child Views"
+                        android:textColor="@color/title_item" />
+
+                    <CheckBox
+                        android:id="@+id/cb_customview_get_childviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
+                        android:text="Get Child Views and Add Event on View"
+                        android:textColor="@color/title_item" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_show_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:text="Show Dialog"
+        android:textColor="#FFF"
+        android:textSize="18dp" />
+
+</LinearLayout>
