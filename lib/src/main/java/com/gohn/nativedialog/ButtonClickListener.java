@@ -5,5 +5,5 @@ package com.gohn.nativedialog;
  */
 
 public interface ButtonClickListener {
-    void onClick();
+    void onClick(int button);
 }

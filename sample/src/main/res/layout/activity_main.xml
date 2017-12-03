@@ -168,13 +168,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/property_left_margin"
                         android:orientation="horizontal">
 
                         <CheckBox
                             android:id="@+id/cb_positive_onclick"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:layout_weight="1"
                             android:checked="true"
                             android:text="Has OnClick?"
@@ -184,7 +184,6 @@
                             android:id="@+id/cb_positive_dismiss"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:checked="true"
                             android:text="Is Dismiss OnClick?"
                             android:textColor="@color/title_item" />
@@ -263,6 +262,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/property_left_margin"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
@@ -270,7 +270,6 @@
                             android:id="@+id/cb_negative_onclick"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:layout_weight="1"
                             android:checked="true"
                             android:text="Has OnClick?"
@@ -280,7 +279,6 @@
                             android:id="@+id/cb_negative_dismiss"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:checked="true"
                             android:text="Is Dismiss OnClick?"
                             android:textColor="@color/title_item" />
@@ -358,6 +356,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/property_left_margin"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
@@ -366,7 +365,6 @@
                             android:id="@+id/cb_neutral_onclick"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:layout_weight="1"
                             android:checked="true"
                             android:text="Has OnClick?"
@@ -376,7 +374,6 @@
                             android:id="@+id/cb_neutral_dismiss"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/property_left_margin"
                             android:checked="true"
                             android:text="Is Dismiss OnClick?"
                             android:textColor="@color/title_item" />

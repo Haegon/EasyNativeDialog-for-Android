@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="title_item">#333</color>
+    <color name="neutral">#aaaaaa</color>
 </resources>

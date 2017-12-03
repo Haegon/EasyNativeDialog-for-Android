@@ -17,9 +17,9 @@ import java.util.List;
  */
 
 public class NDialog {
-    private final int BUTTON_POSITIVE = 1;
-    private final int BUTTON_NEGATIVE = 2;
-    private final int BUTTON_NEUTRAL = 4;
+    public static final int BUTTON_POSITIVE = 1;
+    public static final int BUTTON_NEGATIVE = 2;
+    public static final int BUTTON_NEUTRAL = 4;
 
     private Context context;
     private AlertDialog alertDialog;
@@ -132,7 +132,7 @@ public class NDialog {
                                     dismiss();
                                 }
                                 if (positiveClickListener != null) {
-                                    positiveClickListener.onClick();
+                                    positiveClickListener.onClick(BUTTON_POSITIVE);
                                 }
                             }
                         });
@@ -152,7 +152,7 @@ public class NDialog {
                                     dismiss();
                                 }
                                 if (negativeClickListener != null) {
-                                    negativeClickListener.onClick();
+                                    negativeClickListener.onClick(BUTTON_NEGATIVE);
                                 }
                             }
                         });
@@ -172,7 +172,7 @@ public class NDialog {
                                     dismiss();
                                 }
                                 if (neutralClickListener != null) {
-                                    neutralClickListener.onClick();
+                                    neutralClickListener.onClick(BUTTON_NEUTRAL);
                                 }
                             }
                         });

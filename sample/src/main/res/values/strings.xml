@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Easy Native Dialog</string>
+    <string name="dialog_message">This is Dialog Message</string>
+    <string name="neutral">OPTIONS</string>
 </resources>

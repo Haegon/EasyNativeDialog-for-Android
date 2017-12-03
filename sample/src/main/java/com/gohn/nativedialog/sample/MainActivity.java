@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                 if (cbPositiveOnClick.isChecked()) {
                     nDialog.setPositiveClickListener(new ButtonClickListener() {
                         @Override
-                        public void onClick() {
+                        public void onClick(int button) {
                             toast("Positive Button Clicked");
                         }
                     });
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
                 if (cbNegativeOnClick.isChecked()) {
                     nDialog.setNegativeClickListener(new ButtonClickListener() {
                         @Override
-                        public void onClick() {
+                        public void onClick(int button) {
                             toast("Negative Button Clicked");
                         }
                     });
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
                 if (cbNeutralOnClick.isChecked()) {
                     nDialog.setNeutralClickListener(new ButtonClickListener() {
                         @Override
-                        public void onClick() {
+                        public void onClick(int button) {
                             toast("Neutral Button Clicked");
                         }
                     });
