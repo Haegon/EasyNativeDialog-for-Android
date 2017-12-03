@@ -4,6 +4,13 @@
 [![](https://jitpack.io/v/Haegon/EasyNativeDialog.svg)](https://jitpack.io/#Haegon/EasyNativeDialog)
 
 
+## Demo
+
+<img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot1.png" width="270px" height="480px"/><br/>
+<img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot2.png" width="270px" height="480px"/><br/>
+<img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot3.png" width="270px" height="480px"/>
+
+
 ### Download from Google Play
 
 <a href="https://play.google.com/store/apps/details?id=com.gohn.nativedialog.sample"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="50px"/></a>
