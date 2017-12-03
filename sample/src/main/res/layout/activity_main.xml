@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
                         android:text="Positive"
-                        android:textColor="@color/title_item" />
+                        android:textColor="@color/edittext" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/property_left_margin"
-                            android:text="Is Null?"
+                            android:text="Text is Null?"
                             android:textColor="@color/title_item" />
 
                         <View
@@ -224,7 +224,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
                         android:text="Negative"
-                        android:textColor="@color/title_item" />
+                        android:textColor="@color/edittext" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -237,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/property_left_margin"
-                            android:text="Is Null?"
+                            android:text="Text is Null?"
                             android:textColor="@color/title_item" />
 
                         <View
@@ -319,7 +319,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
                         android:text="Neutral"
-                        android:textColor="@color/title_item" />
+                        android:textColor="@color/edittext" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -332,7 +332,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/property_left_margin"
-                            android:text="Is Null?"
+                            android:text="Text is Null?"
                             android:textColor="@color/title_item" />
 
                         <View
@@ -459,14 +459,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
                         android:text="This is Title"
-                        android:textColor="@color/title_item" />
+                        android:textColor="@color/edittext" />
 
                     <CheckBox
                         android:id="@+id/cb_title_isnull"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
-                        android:text="Is Null?"
+                        android:text="Text is Null?"
                         android:textColor="@color/title_item" />
 
                 </LinearLayout>
@@ -503,14 +503,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
                         android:text="This is message.\nNative Dialog.\nAll Right Reserved."
-                        android:textColor="@color/title_item" />
+                        android:textColor="@color/edittext" />
 
                     <CheckBox
                         android:id="@+id/cb_message_isnull"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/property_left_margin"
-                        android:text="Is Null?"
+                        android:text="Text is Null?"
                         android:textColor="@color/title_item" />
 
                 </LinearLayout>
