@@ -116,7 +116,7 @@ nDialog.setCanceledListener(new CanceledListener() {
 });
 
 
-// Custom View Set up (View or resourceId)
+// Custom View Setup (View or resourceId)
 nDialog.setCustomView(R.layout.custom_view);
 // Handle Only 'OnClick Event' On Custom View
 nDialog.setCustomViewClickListener(new CustomViewClickListener() {

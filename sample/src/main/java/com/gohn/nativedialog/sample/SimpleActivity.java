@@ -25,106 +25,110 @@ public class SimpleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple);
 
-        // Constructor with Bottom Button Count
-        NDialog nDialog = new NDialog(SimpleActivity.this, ButtonType.THREE_BUTTON);
-
-        // Title Icon
-        nDialog.setIcon(R.drawable.help);
-
-        // Title Text
-        nDialog.setTitle("This is title");
-
-        // Content Message
-        nDialog.setMessage(R.string.dialog_message);
-
-
-        // Bottom Button OnClick Event Handler
-        ButtonClickListener buttonClickListener = new ButtonClickListener() {
+        findViewById(R.id.simple_button).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(int button) {
-                switch (button) {
-                    case NDialog.BUTTON_POSITIVE:
-                        Log.d(TAG, "Positive Button Clicked");
-                        break;
-                    case NDialog.BUTTON_NEGATIVE:
-                        Log.d(TAG, "Negative Button Clicked");
-                        break;
-                    case NDialog.BUTTON_NEUTRAL:
-                        Log.d(TAG, "Neutral Button Clicked");
-                        break;
+            public void onClick(View v) {
+                // Constructor with Bottom Button Count
+                NDialog nDialog = new NDialog(SimpleActivity.this, ButtonType.THREE_BUTTON);
+
+                // Title Icon
+                nDialog.setIcon(R.drawable.help);
+
+                // Title Text
+                nDialog.setTitle("This is title");
+
+                // Content Message
+                nDialog.setMessage(R.string.dialog_message);
+
+
+                // Bottom Button OnClick Event Handler
+                ButtonClickListener buttonClickListener = new ButtonClickListener() {
+                    @Override
+                    public void onClick(int button) {
+                        switch (button) {
+                            case NDialog.BUTTON_POSITIVE:
+                                Log.d(TAG, "Positive Button Clicked");
+                                break;
+                            case NDialog.BUTTON_NEGATIVE:
+                                Log.d(TAG, "Negative Button Clicked");
+                                break;
+                            case NDialog.BUTTON_NEUTRAL:
+                                Log.d(TAG, "Neutral Button Clicked");
+                                break;
+                        }
+                    }
+                };
+
+                // Positive Button
+                nDialog.setPositiveText("OKAY");
+                nDialog.setPositiveColor(Color.BLUE);
+                nDialog.setPositiveButtonOnClickDismiss(false); // default : true
+                nDialog.setPositiveClickListener(buttonClickListener);
+
+                // Negative Button
+                nDialog.setNegativeText("NOPE");
+                nDialog.setNegativeColor(Color.parseColor("#FF0000"));
+                nDialog.setNegativeButtonOnClickDismiss(true); // default : true
+                nDialog.setNegativeClickListener(buttonClickListener);
+
+                // Neutral Button
+                nDialog.setNeutralText(R.string.neutral);
+                nDialog.setNeutralColor(R.color.neutral);
+                nDialog.setNeutralButtonOnClickDismiss(false); // default : true
+                nDialog.setNeutralClickListener(buttonClickListener);
+
+                // Cancelable
+                nDialog.isCancelable(false); // default : true
+                nDialog.setCanceledListener(new CanceledListener() {
+                    @Override
+                    public void onCanceled() {
+                        Log.d(TAG, "Dialog Canceled");
+                    }
+                });
+
+
+                // Custom View Set up (View or resourceId)
+                nDialog.setCustomView(R.layout.custom_view);
+                // Handle Only 'OnClick Event' On Custom View
+                nDialog.setCustomViewClickListener(new CustomViewClickListener() {
+                    @Override
+                    public void onClickView(View v) {
+                        switch (v.getId()) {
+                            case R.id.custom_text:
+                                Log.d(TAG, "Custom View Text Clicked");
+                                break;
+                            case R.id.custom_btn:
+                                Log.d(TAG, "Custom View Button Clicked");
+                                break;
+                        }
+                    }
+                });
+                // Handle View Event by User
+                List<View> childViews = nDialog.getCustomViewChildren();
+                for (View childView : childViews) {
+                    switch (childView.getId()) {
+                        case R.id.custom_switch:
+                            ((Switch) childView).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                    Log.d(TAG, "Custom View Switch Checked : " + isChecked);
+                                }
+                            });
+                            break;
+                        case R.id.custom_checkbox:
+                            ((CheckBox) childView).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                    Log.d(TAG, "Custom View CheckBox Checked : " + isChecked);
+                                }
+                            });
+                            break;
+                    }
                 }
-            }
-        };
 
-        // Positive Button
-        nDialog.setPositiveText("OKAY");
-        nDialog.setPositiveColor(Color.BLUE);
-        nDialog.setPositiveButtonOnClickDismiss(false); // default : true
-        nDialog.setPositiveClickListener(buttonClickListener);
-
-        // Negative Button
-        nDialog.setNegativeText("NOPE");
-        nDialog.setNegativeColor(Color.parseColor("#FF0000"));
-        nDialog.setNegativeButtonOnClickDismiss(true); // default : true
-        nDialog.setNegativeClickListener(buttonClickListener);
-
-        // Neutral Button
-        nDialog.setNeutralText(R.string.neutral);
-        nDialog.setNeutralColor(R.color.neutral);
-        nDialog.setNeutralButtonOnClickDismiss(false); // default : true
-        nDialog.setNeutralClickListener(buttonClickListener);
-
-        // Cancelable
-        nDialog.isCancelable(false); // default : true
-        nDialog.setCanceledListener(new CanceledListener() {
-            @Override
-            public void onCanceled() {
-                Log.d(TAG, "Dialog Canceled");
+                // SHOW DIALOG
+                nDialog.show();
             }
         });
-
-
-        // Custom View Set up (View or resourceId)
-        nDialog.setCustomView(R.layout.custom_view);
-        // Handle Only 'OnClick Event' On Custom View
-        nDialog.setCustomViewClickListener(new CustomViewClickListener() {
-            @Override
-            public void onClickView(View v) {
-                switch (v.getId()) {
-                    case R.id.custom_text:
-                        Log.d(TAG, "Custom View Text Clicked");
-                        break;
-                    case R.id.custom_btn:
-                        Log.d(TAG, "Custom View Button Clicked");
-                        break;
-                }
-            }
-        });
-        // Handle View Event by User
-        List<View> childViews = nDialog.getCustomViewChildren();
-        for (View childView : childViews) {
-            switch (childView.getId()) {
-                case R.id.custom_switch:
-                    ((Switch) childView).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                            Log.d(TAG, "Custom View Switch Checked : " + isChecked);
-                        }
-                    });
-                    break;
-                case R.id.custom_checkbox:
-                    ((CheckBox) childView).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                            Log.d(TAG, "Custom View CheckBox Checked : " + isChecked);
-                        }
-                    });
-                    break;
-            }
-        }
-
-
-        // SHOW DIALOG
-        nDialog.show();
     }
 }
