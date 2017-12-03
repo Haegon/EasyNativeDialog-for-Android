@@ -1,7 +1,7 @@
 # Easy Native Dialog
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![](https://jitpack.io/v/Haegon/ParallaxViewPager.svg)](https://jitpack.io/#Haegon/EasyNativeDialog)
+[![](https://jitpack.io/v/Haegon/EasyNativeDialog.svg)](https://jitpack.io/#Haegon/EasyNativeDialog)
 
 
 ### Download from Google Play

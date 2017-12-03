@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_github:
-                String url = "https://github.com/Haegon/ParallaxViewPager";
+                String url = "https://github.com/Haegon/EasyNativeDialog";
                 Intent iGithub = new Intent(Intent.ACTION_VIEW);
                 iGithub.setData(Uri.parse(url));
                 startActivity(iGithub);
