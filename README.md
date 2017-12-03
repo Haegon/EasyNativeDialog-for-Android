@@ -6,7 +6,7 @@
 
 ## Demo
 
-<img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot1.png" width="270px" height="480px"/><br/>
+<img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot0.png" width="270px" height="480px"/><br/>
 <img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot2.png" width="270px" height="480px"/><br/>
 <img src="https://raw.githubusercontent.com/Haegon/EasyNativeDialog/master/extra/Screenshot3.png" width="270px" height="480px"/>
 
