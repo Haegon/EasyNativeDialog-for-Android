@@ -60,22 +60,22 @@ public class SimpleActivity extends AppCompatActivity {
                 };
 
                 // Positive Button
-                nDialog.setPositiveText("OKAY");
-                nDialog.setPositiveColor(Color.BLUE);
+                nDialog.setPositiveButtonText("OKAY");
+                nDialog.setPositiveButtonTextColor(Color.BLUE);
                 nDialog.setPositiveButtonOnClickDismiss(false); // default : true
-                nDialog.setPositiveClickListener(buttonClickListener);
+                nDialog.setPositiveButtonClickListener(buttonClickListener);
 
                 // Negative Button
-                nDialog.setNegativeText("NOPE");
-                nDialog.setNegativeColor(Color.parseColor("#FF0000"));
+                nDialog.setNegativeButtonText("NOPE");
+                nDialog.setNegativeButtonTextColor(Color.parseColor("#FF0000"));
                 nDialog.setNegativeButtonOnClickDismiss(true); // default : true
-                nDialog.setNegativeClickListener(buttonClickListener);
+                nDialog.setNegativeButtonClickListener(buttonClickListener);
 
                 // Neutral Button
-                nDialog.setNeutralText(R.string.neutral);
-                nDialog.setNeutralColor(R.color.neutral);
+                nDialog.setNeutralButtonText(R.string.neutral);
+                nDialog.setNeutralButtonTextColor(R.color.neutral);
                 nDialog.setNeutralButtonOnClickDismiss(false); // default : true
-                nDialog.setNeutralClickListener(buttonClickListener);
+                nDialog.setNeutralButtonClickListener(buttonClickListener);
 
                 // Cancelable
                 nDialog.isCancelable(false); // default : true
@@ -87,7 +87,7 @@ public class SimpleActivity extends AppCompatActivity {
                 });
 
 
-                // Custom View Set up (View or resourceId)
+                // Custom View Setup (View or resourceId)
                 nDialog.setCustomView(R.layout.custom_view);
                 // Handle Only 'OnClick Event' On Custom View
                 nDialog.setCustomViewClickListener(new CustomViewClickListener() {

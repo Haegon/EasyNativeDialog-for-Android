@@ -19,24 +19,24 @@ class MainKotlinActivity : AppCompatActivity() {
                     .setIcon(R.mipmap.ic_launcher)
                     .setTitle("title")
                     .setMessage("message")
-                    .setPositiveText("긍정")
-                    .setNegativeText("부정")
-                    .setNeutralText("중립")
-                    .setPositiveColor(Color.BLUE)
-                    .setNegativeColor(Color.RED)
-                    .setNeutralColor(Color.GRAY)
+                    .setPositiveButtonText("긍정")
+                    .setNegativeButtonText("부정")
+                    .setNeutralButtonText("중립")
+                    .setPositiveButtonTextColor(Color.BLUE)
+                    .setNegativeButtonTextColor(Color.RED)
+                    .setNeutralButtonTextColor(Color.GRAY)
                     .show()
         }
         btn02.setOnClickListener {
             NDialog(this, ButtonType.TWO_BUTTON)
                     .setTitle("title")
                     .setMessage("message")
-                    .setPositiveText("")
-                    .setNegativeText("부정")
-                    .setNeutralText("중립")
-                    .setPositiveColor(Color.BLUE)
-                    .setNegativeColor(Color.RED)
-                    .setNeutralColor(Color.GRAY)
+                    .setPositiveButtonText("")
+                    .setNegativeButtonText("부정")
+                    .setNeutralButtonText("중립")
+                    .setPositiveButtonTextColor(Color.BLUE)
+                    .setNegativeButtonTextColor(Color.RED)
+                    .setNeutralButtonTextColor(Color.GRAY)
                     .setCanceledListener {
                         toast("canceled")
                     }
@@ -46,10 +46,10 @@ class MainKotlinActivity : AppCompatActivity() {
             NDialog(this, ButtonType.THREE_BUTTON)
                     .setTitle("title")
                     .setMessage("message")
-                    .setPositiveColor(Color.RED)
-                    .setNegativeColor(Color.BLACK)
-                    .setNeutralColor(Color.GRAY)
-                    .setNeutralClickListener({
+                    .setPositiveButtonTextColor(Color.RED)
+                    .setNegativeButtonTextColor(Color.BLACK)
+                    .setNeutralButtonTextColor(Color.GRAY)
+                    .setNeutralButtonClickListener({
 
                     })
                     .setNeutralButtonOnClickDismiss(false)
@@ -62,8 +62,8 @@ class MainKotlinActivity : AppCompatActivity() {
             NDialog(this, ButtonType.THREE_BUTTON)
                     .setMessage("message")
                     .isCancelable(false)
-                    .setPositiveText("긍정")
-                    .setPositiveClickListener({
+                    .setPositiveButtonText("긍정")
+                    .setPositiveButtonClickListener({
                         toast("positive")
                     })
                     .show()
@@ -73,8 +73,8 @@ class MainKotlinActivity : AppCompatActivity() {
                     .setTitle("title")
                     .setMessage("message")
                     .isCancelable(false)
-                    .setPositiveText("긍정")
-                    .setPositiveClickListener({
+                    .setPositiveButtonText("긍정")
+                    .setPositiveButtonClickListener({
                         toast("positive")
                     })
 

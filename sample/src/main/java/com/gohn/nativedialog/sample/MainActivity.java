@@ -211,10 +211,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // Positive Button
                 if (!cbPositiveNull.isChecked()) {
-                    nDialog.setPositiveText(etPositive.getText().toString());
+                    nDialog.setPositiveButtonText(etPositive.getText().toString());
                 }
                 if (cbPositiveOnClick.isChecked()) {
-                    nDialog.setPositiveClickListener(new ButtonClickListener() {
+                    nDialog.setPositiveButtonClickListener(new ButtonClickListener() {
                         @Override
                         public void onClick(int button) {
                             toast("Positive Button Clicked");
@@ -222,14 +222,14 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
                 nDialog.setPositiveButtonOnClickDismiss(cbPositiveDismiss.isChecked());
-                nDialog.setPositiveColor(((ColorDrawable) colorPositive.getBackground()).getColor());
+                nDialog.setPositiveButtonTextColor(((ColorDrawable) colorPositive.getBackground()).getColor());
 
                 // Negative Button
                 if (!cbNegativeNull.isChecked()) {
-                    nDialog.setNegativeText(etNegative.getText().toString());
+                    nDialog.setNegativeButtonText(etNegative.getText().toString());
                 }
                 if (cbNegativeOnClick.isChecked()) {
-                    nDialog.setNegativeClickListener(new ButtonClickListener() {
+                    nDialog.setNegativeButtonClickListener(new ButtonClickListener() {
                         @Override
                         public void onClick(int button) {
                             toast("Negative Button Clicked");
@@ -237,14 +237,14 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
                 nDialog.setNegativeButtonOnClickDismiss(cbNegativeDismiss.isChecked());
-                nDialog.setNegativeColor(((ColorDrawable) colorNegative.getBackground()).getColor());
+                nDialog.setNegativeButtonTextColor(((ColorDrawable) colorNegative.getBackground()).getColor());
 
                 // Neutral Button
                 if (!cbNeutralNull.isChecked()) {
-                    nDialog.setNeutralText(etNeutral.getText().toString());
+                    nDialog.setNeutralButtonText(etNeutral.getText().toString());
                 }
                 if (cbNeutralOnClick.isChecked()) {
-                    nDialog.setNeutralClickListener(new ButtonClickListener() {
+                    nDialog.setNeutralButtonClickListener(new ButtonClickListener() {
                         @Override
                         public void onClick(int button) {
                             toast("Neutral Button Clicked");
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
                 nDialog.setNeutralButtonOnClickDismiss(cbNeutralDismiss.isChecked());
-                nDialog.setNeutralColor(((ColorDrawable) colorNeutral.getBackground()).getColor());
+                nDialog.setNeutralButtonTextColor(((ColorDrawable) colorNeutral.getBackground()).getColor());
 
                 // Icon
                 switch (rgIcon.getCheckedRadioButtonId()) {

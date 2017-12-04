@@ -31,15 +31,15 @@ public class NDialog {
     private Drawable icon;
     private CharSequence title;
     private CharSequence message;
-    private CharSequence positiveText;
-    private CharSequence negativeText;
-    private CharSequence neutralText;
-    private int positiveColor;
-    private int negativeColor;
-    private int neutralColor;
-    private ButtonClickListener positiveClickListener;
-    private ButtonClickListener negativeClickListener;
-    private ButtonClickListener neutralClickListener;
+    private CharSequence positiveButtonText;
+    private CharSequence negativeButtonText;
+    private CharSequence neutralButtonText;
+    private int positiveButtonTextColor;
+    private int negativeButtonTextColor;
+    private int neutralButtonTextColor;
+    private ButtonClickListener positiveButtonClickListener;
+    private ButtonClickListener negativeButtonClickListener;
+    private ButtonClickListener neutralButtonClickListener;
     private CanceledListener canceledListener;
     private CustomViewClickListener customViewClickListener;
     private boolean isPositiveButtonOnClickDismiss = true;
@@ -119,11 +119,11 @@ public class NDialog {
                 public void onShow(final DialogInterface dialog) {
                     if ((buttonType.getValue() & BUTTON_POSITIVE) == BUTTON_POSITIVE) {
                         Button button = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                        if (positiveText != null) {
-                            button.setText(positiveText);
+                        if (positiveButtonText != null) {
+                            button.setText(positiveButtonText);
                         }
-                        if (positiveColor != 0) {
-                            button.setTextColor(positiveColor);
+                        if (positiveButtonTextColor != 0) {
+                            button.setTextColor(positiveButtonTextColor);
                         }
                         button.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -131,19 +131,19 @@ public class NDialog {
                                 if (isPositiveButtonOnClickDismiss) {
                                     dismiss();
                                 }
-                                if (positiveClickListener != null) {
-                                    positiveClickListener.onClick(BUTTON_POSITIVE);
+                                if (positiveButtonClickListener != null) {
+                                    positiveButtonClickListener.onClick(BUTTON_POSITIVE);
                                 }
                             }
                         });
                     }
                     if ((buttonType.getValue() & BUTTON_NEGATIVE) == BUTTON_NEGATIVE) {
                         Button button = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE);
-                        if (negativeText != null) {
-                            button.setText(negativeText);
+                        if (negativeButtonText != null) {
+                            button.setText(negativeButtonText);
                         }
-                        if (negativeColor != 0) {
-                            button.setTextColor(negativeColor);
+                        if (negativeButtonTextColor != 0) {
+                            button.setTextColor(negativeButtonTextColor);
                         }
                         button.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -151,19 +151,19 @@ public class NDialog {
                                 if (isNegativeButtonOnClickDismiss) {
                                     dismiss();
                                 }
-                                if (negativeClickListener != null) {
-                                    negativeClickListener.onClick(BUTTON_NEGATIVE);
+                                if (negativeButtonClickListener != null) {
+                                    negativeButtonClickListener.onClick(BUTTON_NEGATIVE);
                                 }
                             }
                         });
                     }
                     if ((buttonType.getValue() & BUTTON_NEUTRAL) == BUTTON_NEUTRAL) {
                         Button button = alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL);
-                        if (neutralText != null) {
-                            button.setText(neutralText);
+                        if (neutralButtonText != null) {
+                            button.setText(neutralButtonText);
                         }
-                        if (neutralColor != 0) {
-                            button.setTextColor(neutralColor);
+                        if (neutralButtonTextColor != 0) {
+                            button.setTextColor(neutralButtonTextColor);
                         }
                         button.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -171,8 +171,8 @@ public class NDialog {
                                 if (isNeutralButtonOnClickDismiss) {
                                     dismiss();
                                 }
-                                if (neutralClickListener != null) {
-                                    neutralClickListener.onClick(BUTTON_NEUTRAL);
+                                if (neutralButtonClickListener != null) {
+                                    neutralButtonClickListener.onClick(BUTTON_NEUTRAL);
                                 }
                             }
                         });
@@ -267,81 +267,81 @@ public class NDialog {
     }
 
 
-    public NDialog setPositiveText(CharSequence positiveText) {
-        this.positiveText = positiveText;
+    public NDialog setPositiveButtonText(CharSequence positiveButtonText) {
+        this.positiveButtonText = positiveButtonText;
         return this;
     }
 
-    public NDialog setPositiveText(int resourceId) {
-        setPositiveText(context.getResources().getString(resourceId));
-        return this;
-    }
-
-
-    public NDialog setNegativeText(CharSequence negativeText) {
-        this.negativeText = negativeText;
-        return this;
-    }
-
-    public NDialog setNegativeText(int resourceId) {
-        setNegativeText(context.getResources().getString(resourceId));
+    public NDialog setPositiveButtonText(int resourceId) {
+        setPositiveButtonText(context.getResources().getString(resourceId));
         return this;
     }
 
 
-    public NDialog setNeutralText(CharSequence neutralText) {
-        this.neutralText = neutralText;
+    public NDialog setNegativeButtonText(CharSequence negativeButtonText) {
+        this.negativeButtonText = negativeButtonText;
         return this;
     }
 
-    public NDialog setNeutralText(int resourceId) {
-        setNeutralText(context.getResources().getString(resourceId));
+    public NDialog setNegativeButtonText(int resourceId) {
+        setNegativeButtonText(context.getResources().getString(resourceId));
         return this;
     }
 
 
-    public NDialog setPositiveColor(int positiveColor) {
-        this.positiveColor = positiveColor;
+    public NDialog setNeutralButtonText(CharSequence neutralButtonText) {
+        this.neutralButtonText = neutralButtonText;
         return this;
     }
 
-    public NDialog setPositiveColorResource(int positiveColorResource) {
-        this.positiveColor = context.getResources().getColor(positiveColorResource);
+    public NDialog setNeutralButtonText(int resourceId) {
+        setNeutralButtonText(context.getResources().getString(resourceId));
         return this;
     }
 
-    public NDialog setNegativeColor(int negativeColor) {
-        this.negativeColor = negativeColor;
+
+    public NDialog setPositiveButtonTextColor(int positiveButtonTextColor) {
+        this.positiveButtonTextColor = positiveButtonTextColor;
         return this;
     }
 
-    public NDialog setNegativeColorResource(int negativeColorResource) {
-        this.negativeColor = context.getResources().getColor(negativeColorResource);
+    public NDialog setPositiveButtonTextColorResource(int positiveButtonTextColorResource) {
+        this.positiveButtonTextColor = context.getResources().getColor(positiveButtonTextColorResource);
         return this;
     }
 
-    public NDialog setNeutralColor(int neutralColor) {
-        this.neutralColor = neutralColor;
+    public NDialog setNegativeButtonTextColor(int negativeButtonTextColor) {
+        this.negativeButtonTextColor = negativeButtonTextColor;
         return this;
     }
 
-    public NDialog setNeutralColorResource(int neutralColorResource) {
-        this.neutralColor = context.getResources().getColor(neutralColorResource);
+    public NDialog setNegativeColorResource(int negativeButtonTextColorResource) {
+        this.negativeButtonTextColor = context.getResources().getColor(negativeButtonTextColorResource);
         return this;
     }
 
-    public NDialog setPositiveClickListener(ButtonClickListener positiveClickListener) {
-        this.positiveClickListener = positiveClickListener;
+    public NDialog setNeutralButtonTextColor(int neutralButtonTextColor) {
+        this.neutralButtonTextColor = neutralButtonTextColor;
         return this;
     }
 
-    public NDialog setNegativeClickListener(ButtonClickListener negativeClickListener) {
-        this.negativeClickListener = negativeClickListener;
+    public NDialog setNeutralColorResource(int neutralButtonTextColorResource) {
+        this.neutralButtonTextColor = context.getResources().getColor(neutralButtonTextColorResource);
         return this;
     }
 
-    public NDialog setNeutralClickListener(ButtonClickListener neutralClickListener) {
-        this.neutralClickListener = neutralClickListener;
+    public NDialog setPositiveButtonClickListener(ButtonClickListener positiveButtonClickListener) {
+        this.positiveButtonClickListener = positiveButtonClickListener;
+        return this;
+    }
+
+    public NDialog setNegativeButtonClickListener(ButtonClickListener negativeButtonClickListener) {
+        this.negativeButtonClickListener = negativeButtonClickListener;
+        return this;
+    }
+
+    public NDialog setNeutralButtonClickListener(ButtonClickListener neutralButtonClickListener) {
+        this.neutralButtonClickListener = neutralButtonClickListener;
         return this;
     }
 
