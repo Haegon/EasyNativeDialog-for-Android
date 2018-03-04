@@ -34,7 +34,7 @@ allprojects {
 * Add the dependency
 ```Gradle
 dependencies {
-    compile 'com.github.Haegon:EasyNativeDialog:0.2.0'
+    compile 'com.github.Haegon:EasyNativeDialog-for-Android:0.3.0'
 }
 ```
 
@@ -55,8 +55,8 @@ Maven
 ```xml
 <dependency>
     <groupId>com.github.Haegon</groupId>
-    <artifactId>EasyNativeDialog</artifactId>
-    <version>0.2.0</version>
+    <artifactId>EasyNativeDialog-for-Android</artifactId>
+    <version>0.3.0</version>
 </dependency>
 ```
 
