@@ -101,15 +101,15 @@ public class NDialog {
 
             // 확인 버튼 표시 여부. 확인 버튼 온클릭 리스너
             if ((buttonType.getValue() & BUTTON_POSITIVE) == BUTTON_POSITIVE) {
-                builder.setPositiveButton(R.string.btn_ok, null);
+                builder.setPositiveButton(R.string.easy_native_dialog_btn_ok, null);
             }
             // 취소 버튼 표시 여부. 취소 버튼 온클릭 리스너
             if ((buttonType.getValue() & BUTTON_NEGATIVE) == BUTTON_NEGATIVE) {
-                builder.setNegativeButton(R.string.btn_cancel, null);
+                builder.setNegativeButton(R.string.easy_native_dialog_btn_cancel, null);
             }
             // 중립 버튼 표시 여부. 중립 버튼 온클릭 리스너
             if ((buttonType.getValue() & BUTTON_NEUTRAL) == BUTTON_NEUTRAL) {
-                builder.setNeutralButton(R.string.btn_option, null);
+                builder.setNeutralButton(R.string.easy_native_dialog_btn_option, null);
             }
 
             // 버튼에 커스텀 글씨, 컬러 표현

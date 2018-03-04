@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="btn_ok">#333333</color>
-    <color name="btn_cancel">#777777</color>
-    <color name="btn_neutral">#aaaaaa</color>
+    <color name="easy_native_dialog_btn_ok">#333333</color>
+    <color name="easy_native_dialog_btn_cancel">#777777</color>
+    <color name="easy_native_dialog_btn_neutral">#aaaaaa</color>
 </resources>

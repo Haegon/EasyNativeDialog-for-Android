@@ -1,5 +1,5 @@
 <resources>
-    <string name="btn_ok">OK</string>
-    <string name="btn_cancel">Cancel</string>
-    <string name="btn_option">Option</string>
+    <string name="easy_native_dialog_btn_ok">OK</string>
+    <string name="easy_native_dialog_btn_cancel">Cancel</string>
+    <string name="easy_native_dialog_btn_option">Option</string>
 </resources>
