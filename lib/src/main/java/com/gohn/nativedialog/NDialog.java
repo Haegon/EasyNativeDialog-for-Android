@@ -234,6 +234,10 @@ public class NDialog {
         return this;
     }
 
+    public View getCustomView() {
+        return this.customView;
+    }
+
     public NDialog setIcon(Drawable icon) {
         this.icon = icon;
         return this;
